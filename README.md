@@ -12,7 +12,7 @@ El rastreo avanzado de datos para archivos JSP solo está disponible a partir de
 
 ## Limitaciones de los tipos de vulnerabilidades que puede detectar la versión Community SonarQube. 
 
-1. **No realiza un rastreo de flujo de datos**
+**1. No realiza un rastreo de flujo de datos**
 No realiza un analisis profundo para detectar problemas inyecciones SQL, ya que no verifica si:**
    a. La entrada proviene de una fuente externa (introducida por un usuario), es decir, no rastrea si una variable está "manchada" con 
       datos no confiables.
@@ -25,7 +25,7 @@ Esto significa que la Community no analiza cómo los datos fluyen a través de d
 
 **Nota:** Aunque puede detectar inyecciones SQL a través de Security Hotspots, este enfoque solo utiliza reglas simples que buscan patrones estáticos comunes en el código. 
 
-2. **Se limita a errores básicos como código muerto, mal uso de variables o complejidad alta.**
+**2. Se limita a errores básicos como código muerto, mal uso de variables o complejidad alta.**
 Debido a que:
 
 La Community realiza únicamente análisis estático básico, como se indica en sus características:
@@ -38,6 +38,6 @@ c. complejidad ciclomatica alta (Código con demasiadas ramificaciones o caminos
 **La edición Developer amplía esta capacidad con:**
 "Análisis de contaminación con SAST más profundo para Java, C#, JavaScript y TypeScript" y "Detección de errores avanzados que causan errores de tiempo de ejecución y bloqueos".
 
-3. **No detecta vulnerabilidades avanzadas ni problemas de configuración**. 
+**3. No detecta vulnerabilidades avanzadas ni problemas de configuración**. 
 *No detecta:* Deserialización insegura, Cross-Site Scripting (XSS) ni problemas de configuración de seguridad, como credenciales por defecto o malas configuraciones de permisos.
 Esto se debe a la falta de motores avanzados de análisis estático de seguridad (SAST) y rastreo de flujo de datos, que solo están disponibles en las ediciones Developer y superiores. 
