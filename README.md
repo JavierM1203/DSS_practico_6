@@ -15,8 +15,28 @@ De las vulneravilidades identidicadas en los Security Hotspots de Sonarqube, hay
 
 ## Falsos positivos y falsos negativos identificados. 
 
-Comparando los hallazgos de SonarQube con las vulnerabilidades previamente identificadas en los prácticos, se encontraron varios falsos negativos. Estas son vulnerabilidades que no fueron detectadas por la herramienta en su análisis:
-improper input validación, inyección  de comando, path transversal, missing authorization y missing autorizathion for critical function.
+Comparando los hallazgos de SonarQube con las vulnerabilidades previamente identificadas en los prácticos, se encontraron varios falsos negativos. 
+
+**Estas son vulnerabilidades que no fueron detectadas por la herramienta en su análisis:**
+
+1. **improper input validación:** Ocurre cuando la aplicación no valida adecuadamente las entradas del usuario.
+*Motivo del falso negativo:* La versión Community no realiza rastreo de flujo de datos ni aplica reglas avanzadas para verificar si los datos de entrada alcanzan sinks inseguros.
+
+2. **inyección  de comando:** Permite a un atacante ejecutar comandos en el SO mediante entradas no validadas.
+*Motivo del falso negativo:*
+La versión Community no está equipada con análisis profundo para detectar vulnerabilidades que involucran la ejecución dinámica de comandos.
+
+3. **path transversal:** Consiste en manipular rutas de archivos para acceder a ubicaciones no autorizadas en el servidor.
+*Motivo del falso negativo:*
+Para identificarla se suele requerir rastreo de flujo de datos para identificar si las entradas del usuario alcanzan operaciones de archivos sin una validación o sanitización adecuada.
+
+4. **missing authorization:** Ocurre cuando no se implementa un control adecuado de autorización para verificar si el usuario tiene permiso para realizar una acción.
+*Motivo del falso negativo:*
+Esta vulnerabilidad no se detecta fácilmente mediante análisis estático, ya que implica entender el flujo lógico de la aplicación y verificar controles de acceso.
+
+5. missing autorizathion for critical function: Es similar al problema anterior, aplicada a funciones críticas que deben estar protegidas mediante controles de acceso estrictos.
+*Motivo del falso negativo:*
+Al igual que con el caso anterior, requiere análisis de lógica de negocio y flujo de datos, que no están disponibles en la edición Community.
 
 ## Limitaciones de la versión Community de SonarQube en el análisis de archivos JSP.  
 La versión Community no analiza el codigo Java dentro de los archivos JSP. 
