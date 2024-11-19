@@ -2,6 +2,17 @@
 
 ## Resultados de SonarQube vs vulnerabilidades previamente identificadas. 
 
+De las vulneravilidades identidicadas en los Security Hotspots de Sonarqube, hay dos que coinciden con las vulnerabilidades vistas en prácticos anteriores.
+
+1. SQL Injection
+
+![alt text](images/sql_injection.png)
+
+2. Hard-coded credentials
+
+![alt text](images/hardcoded_credentials.png)
+
+
 ## Falsos positivos y falsos negativos identificados. 
 
 ## Limitaciones de la versión Community de SonarQube en el análisis de archivos JSP.  
