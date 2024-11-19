@@ -15,6 +15,9 @@ De las vulneravilidades identidicadas en los Security Hotspots de Sonarqube, hay
 
 ## Falsos positivos y falsos negativos identificados. 
 
+Comparando los hallazgos de SonarQube con las vulnerabilidades previamente identificadas en los prácticos, se encontraron varios falsos negativos. Estas son vulnerabilidades que no fueron detectadas por la herramienta en su análisis:
+improper input validación, inyección  de comando, path transversal, missing authorization y missing autorizathion for critical function.
+
 ## Limitaciones de la versión Community de SonarQube en el análisis de archivos JSP.  
 La versión Community no analiza el codigo Java dentro de los archivos JSP. 
 El rastreo avanzado de datos para archivos JSP solo está disponible a partir de la edición Developer de SonarQube (v8.3+).
