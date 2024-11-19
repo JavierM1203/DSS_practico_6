@@ -27,17 +27,14 @@ Comparando los hallazgos de SonarQube con las vulnerabilidades previamente ident
 La versión Community no está equipada con análisis profundo para detectar vulnerabilidades que involucran la ejecución dinámica de comandos.
 
 3. **Path Transversal:** Consiste en manipular rutas de archivos para acceder a ubicaciones no autorizadas en el servidor.
-   
-*Motivo del falso negativo:*
+   *Motivo del falso negativo:*
 Para identificarla se suele requerir rastreo de flujo de datos para identificar si las entradas del usuario alcanzan operaciones de archivos sin una validación o sanitización adecuada.
 
 4. **Missing Authorization:** Ocurre cuando no se implementa un control adecuado de autorización para verificar si el usuario tiene permiso para realizar una acción.
-
 *Motivo del falso negativo:*
 Esta vulnerabilidad no se detecta fácilmente mediante análisis estático, ya que implica entender el flujo lógico de la aplicación y verificar controles de acceso.
 
 5. Missing Autorizathion for critical function: Es similar al problema anterior, aplicada a funciones críticas que deben estar protegidas mediante controles de acceso estrictos.
-
 *Motivo del falso negativo:*
 Al igual que con el caso anterior, requiere análisis de lógica de negocio y flujo de datos, que no están disponibles en la edición Community.
 
