@@ -48,8 +48,9 @@ El rastreo avanzado de datos para archivos JSP solo está disponible a partir de
 
 **1. No realiza un rastreo de flujo de datos**
 No realiza un analisis profundo para detectar problemas inyecciones SQL, ya que no verifica si:**
-   a. La entrada proviene de una fuente externa (introducida por un usuario), es decir, no rastrea si una variable está "manchada" con 
-      datos no confiables.
+
+   a. La entrada proviene de una fuente externa (introducida por un usuario), es decir, no rastrea si una variable está "manchada" con datos no confiables.
+   
    b. Los datos inseguros alcanzan un "sink" (punto de riesgo) vulnerable, como un método de ejecución SQL, sin ser sanitizados.
 
 **El rastreo de flujo de datos está disponible a partir de la edición Developer, como se indica en sus características:**
@@ -65,8 +66,11 @@ Debido a que:
 La Community realiza únicamente análisis estático básico, como se indica en sus características:
 "Detectar errores y vulnerabilidades básicas en el código" y "Revisión de los puntos de acceso de seguridad".
 **Esto se traduce en problemas menores como:**
+
 a. Variables no utilizadas (Código que reserva memoria pero no se ejecuta)
+
 b. Código duplicado (Fragmentos repetidos que dificultan el mantenimiento)
+
 c. complejidad ciclomatica alta (Código con demasiadas ramificaciones o caminos posibles, lo que lo hace difícil de entender, probar y mantener)
 
 **La edición Developer amplía esta capacidad con:**
