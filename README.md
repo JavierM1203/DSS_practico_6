@@ -52,7 +52,7 @@ El rastreo avanzado de datos para archivos JSP solo está disponible a partir de
 
 **1. No realiza un rastreo de flujo de datos.**  
 
-No realiza un analisis profundo para detectar problemas inyecciones SQL, ya que no verifica si:**
+No realiza un analisis profundo para detectar problemas inyecciones SQL, ya que no verifica si:
 
    a. La entrada proviene de una fuente externa (introducida por un usuario), es decir, no rastrea si una variable está "manchada" con datos no confiables.
    
