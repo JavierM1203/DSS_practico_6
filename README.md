@@ -38,7 +38,7 @@ Para identificarla se suele requerir rastreo de flujo de datos para identificar 
       *Motivo del falso negativo:*
 Esta vulnerabilidad no se detecta fácilmente mediante análisis estático, ya que implica entender el flujo lógico de la aplicación y verificar controles de acceso.
 
-5. Missing Autorizathion for critical function: Es similar al problema anterior, aplicada a funciones críticas que deben estar protegidas mediante controles de acceso estrictos.
+5. **Missing Autorizathion for critical function:** Es similar al problema anterior, aplicada a funciones críticas que deben estar protegidas mediante controles de acceso estrictos.
       *Motivo del falso negativo:*
 Al igual que con el caso anterior, requiere análisis de lógica de negocio y flujo de datos, que no están disponibles en la edición Community.
 
