@@ -13,7 +13,11 @@ De las vulneravilidades identidicadas en los Security Hotspots de Sonarqube, hay
 ![alt text](images/hardcoded_credentials.png)
 
 
-## Falsos positivos y falsos negativos identificados. 
+## Falsos positivos identificados.
+
+Luego de analizar las vulnerabilidades detectadas por SonarQube, no se logró identificar ningún falso positivo.
+
+## Falsos negativos identificados. 
 
 Comparando los hallazgos de SonarQube con las vulnerabilidades previamente identificadas en los prácticos, se encontraron varios falsos negativos. 
 
