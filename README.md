@@ -1,5 +1,7 @@
 # Resumen Ejecutivo
 
+El presente práctico corresponde a la ejecución de una herramienta de análisis estático de código. En este caso se utilizará SonarQube. Se propone ejecutar un análisis de código al software Altoro Mutual.
+
 ## Resultados de SonarQube vs vulnerabilidades previamente identificadas. 
 
 De las vulneravilidades identidicadas en los Security Hotspots de Sonarqube, hay dos que coinciden con las vulnerabilidades vistas en prácticos anteriores.
@@ -38,7 +40,7 @@ Para identificarla se suele requerir rastreo de flujo de datos para identificar 
       *Motivo del falso negativo:*
 Esta vulnerabilidad no se detecta fácilmente mediante análisis estático, ya que implica entender el flujo lógico de la aplicación y verificar controles de acceso.
 
-5. **Missing Autorizathion for critical function:** Es similar al problema anterior, aplicada a funciones críticas que deben estar protegidas mediante controles de acceso estrictos.
+5. **Missing Autorization for critical function:** Es similar al problema anterior, aplicada a funciones críticas que deben estar protegidas mediante controles de acceso estrictos.
       *Motivo del falso negativo:*
 Al igual que con el caso anterior, requiere análisis de lógica de negocio y flujo de datos, que no están disponibles en la edición Community.
 
@@ -52,7 +54,7 @@ El rastreo avanzado de datos para archivos JSP solo está disponible a partir de
 
 **1. No realiza un rastreo de flujo de datos.**  
 
-No realiza un analisis profundo para detectar problemas inyecciones SQL, ya que no verifica si:
+No realiza un analisis profundo para detectar problemas de inyecciones SQL, ya que no verifica si:
 
    a. La entrada proviene de una fuente externa (introducida por un usuario), es decir, no rastrea si una variable está "manchada" con datos no confiables.
    
@@ -74,7 +76,7 @@ a. Variables no utilizadas (Código que reserva memoria pero no se ejecuta)
 
 b. Código duplicado (Fragmentos repetidos que dificultan el mantenimiento)
 
-c. complejidad ciclomatica alta (Código con demasiadas ramificaciones o caminos posibles, lo que lo hace difícil de entender, probar y mantener)
+c. Complejidad ciclomatica alta (Código con demasiadas ramificaciones o caminos posibles, lo que lo hace difícil de entender, probar y mantener)
 
 **La edición Developer amplía esta capacidad con:**
 "Análisis de contaminación con SAST más profundo para Java, C#, JavaScript y TypeScript" y "Detección de errores avanzados que causan errores de tiempo de ejecución y bloqueos".
